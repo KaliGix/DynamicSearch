@@ -10,133 +10,29 @@
     <div class="app">
       <header class="header">
         <p>Stream<span class="red">Index</span></p>
-        <button type="button" class="sign-in">Sign in</button>
-        <h1 class="header-content">Unlimited movies, tv shows, and more</h1>
+        <button type="button" class="btn language">language</button>
+        <button type="button" class="btn sign-in">Sign in</button>
+         
       </header>
 
       <main class="main">
-        <section>
+        <section class="container-filter">
+
+           <h1 class="header-filter">Unlimited movies, tv shows, and more</h1>
           <input
             type="text"
             class="filter"
-            placeholder="  type the movie or serie name"
+            id="filter-item"
+            placeholder="  Search for movies or TV shows..."
             autocomplete="off"
           />
         </section>
 
-       
-        <div class="message"><span>the movie or tv show does not exits in our records</span></div>
-        <section class="catalog">
+        <section class="catalog"></section>
 
-             
-          <!-- <div class="card">
-          
-            <img src="resources/AvengersInfinity.jpg" />
-              <p>Avenges Infinity war</p>
-            <p>Description</p>
-            <p>realease Date</p>
-          </div>
-
-          <div class="card">
-           
-            <img src="resources/avengersUltron.jpg" />
-             <p>Avenges Age of ultron</p>
-            <p>Description</p>
-            <p>realease Date</p>
-          </div>
-
-          <div class="card">
-            
-            <img src="resources/ThorDarkWorld.webp" />
-            <p>Thor Dark World</p>
-            <p>Description</p>
-            <p>realease Date</p>
-          </div>
-
-          <div class="card">
-           
-            <img src="resources/Flash_serie.jpg" />
-             <p>The flash</p>
-            <p>Description</p>
-            <p>realease Date</p>
-          </div>
-
-          <div class="card">
-         
-            <img src="resources/mr-robot.jpg" />
-               <p>MR Robot</p>
-            <p>Description</p>
-            <p>realease Date</p>
-          </div>
-
-          <div class="card">
-          
-            <img src="resources/DragonBall.png" />
-              <p>Dragon ball Z</p>
-            <p>Description</p>
-            <p>realease Date</p>
-          </div>
-
-          <div class="card">
-            
-            <img src="resources/DragonBallGT.jpg" />
-            <p>Dragon ball GT</p>
-            <p>Description</p>
-            <p>realease Date</p>
-          </div>
-
-          <div class="card">
-          
-            <img src="resources/Tsubasa.jpg" />
-              <p>Captain Tsubasa</p>
-            <p>Description</p>
-            <p>realease Date</p>
-          </div>
-
-          <div class="card">
-            
-            <img src="resources/WhisperOfHeart.jpg" />
-            <p>Whisper of the heart</p>
-            <p>Description</p>
-            <p>realease Date</p>
-          </div>
-
-          <div class="card">
-           
-            <img src="resources/Evangelion.jpg" />
-             <p>Evangelion</p>
-            <p>Description</p>
-            <p>realease Date</p>
-          </div>
-
-          <div class="card">
-            <img src="resources/soloLeveling.jpg" />
-            <p>Solo Leveling</p>
-            <p>Description</p>
-            <p>realease Date</p>
-          </div>
-
-          <div class="card">
-            <img src="resources/XmenDaysFuture.jpg" />
-             <p>Xmen</p>
-            <p>Description</p>
-            <p>realease Date</p>
-          </div>
-
-          <div class="card">
-            <img src="resources/fantasticFour.jpg" />
-             <p>The fantastic Four</p>
-            <p>Description</p>
-            <p>realease Date</p>
-          </div>
-
-          <div class="card">
-            <img src="resources/BruceLeeKarate.jpg" />
-             <p>Bruce Lee karate a muerte</p>
-            <p>Description</p>
-            <p>realease Date</p>
-          </div> -->
-        </section>
+        <div class="message">
+          <span>No results found. Try a different title</span>
+        </div>
       </main>
 
       <footer class="footer">

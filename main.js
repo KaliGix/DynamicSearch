@@ -160,7 +160,6 @@ const renderCatalog = document.querySelector(".catalog");
 
 liveSearch.addEventListener("keyup", searchItem);
 
-displayMessage("none");
 renderItems(catalog);
 
 function searchItem(keyboardEvent) {
@@ -170,28 +169,33 @@ function searchItem(keyboardEvent) {
     const result = catalog.filter((query) =>
       query.title.toLowerCase().includes(searchTerm),
     );
-
-    if (result) renderItems(result);
-    else displayMessage("block");
-
+    console.log(result);
+    if (result.length > 0) {
+      renderItems(result);
+    } else displayMessage("block");
   } catch (error) {
     console.log(error);
   }
 }
 
-function displayMessage(value){
-    messageResult.style.display = value;
+function displayMessage(value) {
+  console.log(value);
+  messageResult.style.display = value;
+  renderCatalog.innerHTML = "";
 }
 function renderItems(catalogItems) {
   renderCatalog.innerHTML = "";
+  displayMessage("none");
 
   catalogItems.forEach((item) => {
     renderCatalog.innerHTML += `<div class="card">
             <img src="${item.imageUrl}" />
-            <p>${item.title}</p>
-            <p>${item.year}</p>
-            <p>${item.duration}</p>
-            <p>${item.type}</p>
+           
+            <p class="item-title">${item.title}</p>
+            <p class="item-release-date">${item.year} </p>
+            <p class="item-duration">${item.duration} min</p>
+            <p class="item-type">${item.type}</p>
+             
           </div>`;
   });
 }
