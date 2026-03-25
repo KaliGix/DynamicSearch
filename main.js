@@ -35,12 +35,23 @@ const catalog = [
   {
     id: crypto.randomUUID(),
     title: "The flash",
-    imageUrl: "resources/The_Flash_Movie.webp",
+    imageUrl: "resources/Flash_serie.jpg",
     year: 2014,
     duration: 43,
     psinopsis:
       "After being struck by lightning, Barry Allen wakes up from his coma to discover he's been given the power of super speed, becoming the Flash, and fighting crime in Central City",
     type: "Tv Series",
+  },
+
+  {
+    id: crypto.randomUUID(),
+    title: "The flash",
+    imageUrl: "resources/The_Flash_Movie.webp",
+    year: 2023,
+    duration: 144,
+    psinopsis:
+      "Flash, the fastest man alive, travels to a timeline where Earth is in crisis and the rest of the heroes are lost or scattered.",
+    type: "Movie",
   },
 
   {
@@ -186,12 +197,13 @@ renderItems(catalog);
 
 function searchItem(keyboardEvent) {
   try {
+  
     const searchTerm = liveSearch.value.toLowerCase().trim();
 
     const result = catalog.filter((query) =>
       query.title.toLowerCase().includes(searchTerm),
     );
-    console.log(result);
+    
     if (result.length > 0) {
       renderItems(result);
     } else displayMessage("block");
@@ -201,14 +213,20 @@ function searchItem(keyboardEvent) {
 }
 
 function displayMessage(value) {
-  console.log(value);
+  
   messageResult.style.display = value;
   renderCatalog.innerHTML = "";
 }
+
+
 function renderItems(catalogItems) {
+
+  try
+  {
   renderCatalog.innerHTML = "";
   displayMessage("none");
 
+  if(catalogItems){
   catalogItems.forEach((item) => {
     renderCatalog.innerHTML += `<div class="card">
             <img src="${item.imageUrl}" />
@@ -217,7 +235,10 @@ function renderItems(catalogItems) {
             <p class="item-release-date">${item.year} </p>
             <p class="item-duration">${item.duration} min</p>
             <p class="item-type">${item.type}</p>
-             
           </div>`;
   });
+}
+  } catch(error){
+    console.log(error);
+  }
 }
