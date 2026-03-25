@@ -7,7 +7,7 @@ const catalog = [
     duration: 150,
     psinopsis:
       "The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.",
-    type: "movie",
+    type: "Movie",
   },
 
   {
@@ -18,7 +18,7 @@ const catalog = [
     duration: 141,
     psinopsis:
       "When Tony Stark and Bruce Banner try to jump-start a dormant peacekeeping program called Ultron, things go horribly wrong and it's up to Earth's mightiest heroes to stop the villainous Ultron from enacting his terrible plan.",
-    type: "movie",
+    type: "Movie",
   },
 
   {
@@ -29,7 +29,7 @@ const catalog = [
     duration: 115,
     psinopsis:
       "The powerful but arrogant god Thor is cast out of Asgard to live amongst humans in Midgard (Earth), where he soon becomes one of their finest defenders.",
-    type: "movie",
+    type: "Movie",
   },
 
   {
@@ -151,6 +151,28 @@ const catalog = [
     psinopsis:
       "A young Chinese man sworn an oath of non-violence moves to Thailand to work with his cousins in an ice factory, which he discovers to be a front for a sinister heroin-smuggling operation.",
     type: "Movie",
+  },
+
+   {
+    id: crypto.randomUUID(),
+    title: "Doraemon: nobita and the space heroes",
+    imageUrl: "resources/portada_doraemon.webp",
+    year: 2015,
+    duration: 100,
+    psinopsis:
+      "Nobita wishes to be a real hero. Doraemon uses his gadget, the Burger Director to make them a real Movie superhero. Aron saw the five powers and abilities and asks them to help him save his planet, the planet Pokkuru. After their journey to the planet, the gang thought it was only Burger's doing but realizing that it is not a Movie and they are actually fighting bad...",
+    type: "Movie",
+  },
+
+   {
+    id: crypto.randomUUID(),
+    title: "Power Rangers",
+    imageUrl: "resources/power-rangers.jpg",
+    year: 1993,
+    duration: 30,
+    psinopsis:
+      "A team of teenagers are tasked with saving Angel Grove from the evil witch, Rita Repulsa, and later from Lord Zedd, Emperor of All He Sees, and his horde of monsters.",
+    type: "Tv series"
   },
 ];
 
