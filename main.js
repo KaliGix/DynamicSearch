@@ -230,11 +230,13 @@ function renderItems(catalogItems) {
   catalogItems.forEach((item) => {
     renderCatalog.innerHTML += `<div class="card">
             <img src="${item.imageUrl}" />
-           
             <p class="item-title">${item.title}</p>
-            <p class="item-release-date">${item.year} </p>
-            <p class="item-duration">${item.duration} min</p>
-            <p class="item-type">${item.type}</p>
+            
+            <div class="card-details">
+                <p class="item-release-date">${item.year} </p>
+                <p class="item-duration">${item.duration} min</p>
+                <p class="item-type">${item.type}</p>
+            </div>
           </div>`;
   });
 }

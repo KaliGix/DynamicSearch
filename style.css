@@ -16,7 +16,7 @@ body {
 }
 
 .header {
-  height: 300px;
+  height: 250px;
   padding: 10px 100px;
   display: flex;
   flex-direction: row;
@@ -120,7 +120,7 @@ p .red {
   background-color: rgba(0, 0, 0, 0.938);
   text-align: center;
   padding: 5% 0;
-  display: block;
+  display: none;
 }
 
 .catalog {
@@ -151,6 +151,7 @@ p .red {
   border-style: solid;
   transition: all 0.7s ease;
 }
+
 .card p {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 20px;
@@ -159,29 +160,23 @@ p .red {
   color: #6b6868;
 }
 
+.card-details {
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ gap: 30px;
+}
+
 .card .item-title {
   text-align: left;
-  font-size: 25px;
+  font-size: 28px;
   color: #999696;
   font-weight: 900;
 }
 
-.card .item-release-date {
-  text-align: left;
-  display: inline-block;
-}
-
-.card .item-duration {
-  display: inline-block;
-  text-align: right;
-}
-
 .card .item-type {
-  display: inline-block;
-  text-align: right;
   border-radius: 10px;
   border-style: solid;
-  margin-right: 5px;
 }
 
 img {
